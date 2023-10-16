@@ -158,7 +158,7 @@ func EncryptDataV3(data, auth []byte, scryptN, scryptP int) (CryptoJSON, error) 
 	}
 	mac := crypto.Keccak256(derivedKey[16:32], cipherText)
 
-	kdfParamsJson := &kdfParamsJSON{
+	kdfParamsJson := &kdfParams{
 		N:     scryptN,
 		R:     scryptR,
 		P:     scryptP,

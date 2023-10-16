@@ -82,11 +82,11 @@ type CryptoJSON struct {
 	CipherText   string           `json:"ciphertext"`
 	CipherParams cipherparamsJSON `json:"cipherparams"`
 	KDF          string           `json:"kdf"`
-	KDFParams    kdfParamsJSON    `json:"kdfparams"`
+	KDFParams    kdfParams        `json:"kdfparams"`
 	MAC          string           `json:"mac"`
 }
 
-type kdfParamsJSON struct {
+type kdfParams struct {
 	Salt  string `json:"salt"`
 	DKlen int    `json:"dklen"`
 	N     int    `json:"n"`
